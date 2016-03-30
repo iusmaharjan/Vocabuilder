@@ -45,7 +45,14 @@ dependencies {
 
     compile 'com.android.support:appcompat-v7:23.2.1'
 
+    // Design Support Library
     compile "com.android.support:design:23.2.1"
+
+    // Guava Library
+    compile "com.google.guava:guava:18.0"
+
+    // Butterknife View Injection Library
+    compile 'com.jakewharton:butterknife:7.0.1'
 
     // Timber
     compile 'com.jakewharton.timber:timber:4.1.1'
