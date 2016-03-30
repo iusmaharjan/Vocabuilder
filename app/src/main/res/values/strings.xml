@@ -1,3 +1,11 @@
 <resources>
+    
+    <!-- App Name -->
     <string name="app_name">Vocabuilder</string>
+    
+    <!-- Text View Strings -->
+    <string name="text_word">Word</string>
+    <string name="text_meaning">Meaning</string>
+    <string name="text_example">Example</string>
+
 </resources>
