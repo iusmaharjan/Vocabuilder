@@ -1,9 +1,10 @@
 package com.iusmaharjan.vocabuilder;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +13,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Timber.d("Timber activated");
+        if(null == savedInstanceState) {
+            initFragment(MainFragment.newInstance());
+        }
+    }
+
+    private void initFragment(Fragment fragment) {
+        // Add the MainFragment to the layout
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.contentFrame, fragment);
+        transaction.commit();
     }
 
 }
