@@ -1,6 +1,5 @@
 package com.iusmaharjan.vocabuilder.main;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -11,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.iusmaharjan.vocabuilder.AddWordActivity;
+import com.iusmaharjan.vocabuilder.addword.AddWordActivity;
 import com.iusmaharjan.vocabuilder.R;
 import com.iusmaharjan.vocabuilder.Word;
 
@@ -20,7 +19,6 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class MainFragment extends Fragment implements MainActivityContract.View {
 
