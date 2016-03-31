@@ -6,4 +6,8 @@
     <!-- Margin for Favicon -->
     <dimen name="fab_margin">16dp</dimen>
 
+    <!-- Font Size -->
+    <dimen name="font_list_normal">16sp</dimen>
+    <dimen name="font_list_dense">13sp</dimen>
+
 </resources>
