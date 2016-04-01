@@ -5,7 +5,6 @@
     
     <!-- Text View Strings -->
     <string name="text_word">Word</string>
-    <string name="text_meaning">Meaning</string>
-    <string name="text_example">Example</string>
+    <string name="text_notes">Notes</string>
 
 </resources>
