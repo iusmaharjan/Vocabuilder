@@ -1,8 +1,18 @@
 package com.iusmaharjan.vocabuilder;
 
-public class Word {
+import java.util.Date;
 
+import io.realm.RealmObject;
+import io.realm.annotations.Required;
+
+public class Word extends RealmObject {
+
+    @Required
     private String word;
+
+    private String note;
+
+    public Word() {}
 
     public Word(String word) {
         this.word = word;
@@ -15,4 +25,13 @@ public class Word {
     public void setWord(String word) {
         this.word = word;
     }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
 }
