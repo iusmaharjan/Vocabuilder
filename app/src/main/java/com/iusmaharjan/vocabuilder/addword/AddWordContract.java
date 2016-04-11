@@ -1,5 +1,7 @@
 package com.iusmaharjan.vocabuilder.addword;
 
+import com.iusmaharjan.vocabuilder.model.Word;
+
 public interface AddWordContract {
 
     interface View {
@@ -7,6 +9,6 @@ public interface AddWordContract {
     }
 
     interface UserInteractions {
-        void saveWord();
+        void saveWord(String word, String note);
     }
 }

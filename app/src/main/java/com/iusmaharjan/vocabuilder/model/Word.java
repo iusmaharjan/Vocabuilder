@@ -14,6 +14,11 @@ public class Word extends RealmObject {
 
     public Word() {}
 
+    public Word(String word, String note) {
+        this.word = word;
+        this.note = note;
+    }
+
     public Word(String word) {
         this.word = word;
     }
