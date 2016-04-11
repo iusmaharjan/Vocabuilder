@@ -21,6 +21,11 @@ public class MainActivityPresenter implements MainActivityContract.UserActionsLi
     }
 
     @Override
+    public void loadNotes(boolean forced) {
+        //TODO: Implement this method
+    }
+
+    @Override
     public void openWordsDetail(@NonNull Word requesetedWord) {
         //TODO: Implement this method
     }

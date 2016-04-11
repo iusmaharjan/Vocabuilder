@@ -21,6 +21,8 @@ public interface MainActivityContract {
 
         void addNewWord();
 
+        void loadNotes(boolean forced);
+
         void openWordsDetail(@NonNull Word requesetedWord);
 
     }
