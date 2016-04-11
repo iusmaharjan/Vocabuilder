@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.iusmaharjan.vocabuilder.R;
-import com.iusmaharjan.vocabuilder.Word;
+import com.iusmaharjan.vocabuilder.model.Word;
 
 import java.util.List;
 

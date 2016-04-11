@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.iusmaharjan.vocabuilder.addword.AddWordActivity;
 import com.iusmaharjan.vocabuilder.R;
-import com.iusmaharjan.vocabuilder.Word;
+import com.iusmaharjan.vocabuilder.model.Word;
 
 import java.util.ArrayList;
 import java.util.List;

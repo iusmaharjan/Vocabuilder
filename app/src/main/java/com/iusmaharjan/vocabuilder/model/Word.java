@@ -1,4 +1,4 @@
-package com.iusmaharjan.vocabuilder;
+package com.iusmaharjan.vocabuilder.model;
 
 import java.util.Date;
 
