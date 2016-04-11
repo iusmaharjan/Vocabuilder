@@ -6,8 +6,15 @@
 
     <TextView
         android:id="@+id/text_word"
-        android:text="@dimen/font_list_normal"
-        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/list_vertical_margin"
+        android:paddingRight="@dimen/list_vertical_margin"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:textColor="@color/colorNormalText"
+        android:textSize="@dimen/font_size_normal"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 </LinearLayout>
