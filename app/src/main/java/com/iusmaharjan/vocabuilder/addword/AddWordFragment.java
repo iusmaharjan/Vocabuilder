@@ -72,4 +72,9 @@ public class AddWordFragment extends Fragment implements AddWordContract.View{
     public void showEmptyWordError() {
         Toast.makeText(getContext(), getString(R.string.error_empty_word), Toast.LENGTH_LONG).show();
     }
+
+    @Override
+    public void showDuplicateWordError() {
+        Toast.makeText(getContext(), getString(R.string.error_duplicate_word), Toast.LENGTH_LONG).show();
+    }
 }

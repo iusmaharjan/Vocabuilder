@@ -12,4 +12,6 @@ public interface WordsServiceApi {
     void getWord(String wordId, WordsServiceCallback<Word> callback);
 
     void saveWord(Word word);
+
+    boolean checkDuplicate(String word);
 }

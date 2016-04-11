@@ -24,8 +24,12 @@ public class AddWordPresenter implements AddWordContract.UserInteractions {
         if(word == null || "".equals(word)) {
             view.showEmptyWordError();
         } else {
-            wordsRepository.saveWord(new Word(word, note));
-            view.showWordList();
+            if(wordsRepository.checkDuplicate(word)) {
+                view.showDuplicateWordError();
+            } else {
+                wordsRepository.saveWord(new Word(word, note));
+                view.showWordList();
+            }
         }
     }
 }

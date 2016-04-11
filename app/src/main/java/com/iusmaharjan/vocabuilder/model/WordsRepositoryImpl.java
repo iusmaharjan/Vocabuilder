@@ -43,4 +43,9 @@ public class WordsRepositoryImpl implements WordsRepository {
     public void refreshData() {
 
     }
+
+    @Override
+    public boolean checkDuplicate(@NonNull String word) {
+        return mWordsServiceApi.checkDuplicate(word);
+    }
 }

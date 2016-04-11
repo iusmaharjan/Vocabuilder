@@ -17,6 +17,8 @@ public interface WordsRepository {
 
     void getWord(@NonNull String wordId, @NonNull GetWordCallback callback);
 
+    boolean checkDuplicate(@NonNull String word);
+
     void saveWord(@NonNull Word word);
 
     void refreshData();

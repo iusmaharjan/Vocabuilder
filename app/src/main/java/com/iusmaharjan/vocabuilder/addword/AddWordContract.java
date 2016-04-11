@@ -8,6 +8,8 @@ public interface AddWordContract {
         void showWordList();
 
         void showEmptyWordError();
+
+        void showDuplicateWordError();
     }
 
     interface UserInteractions {

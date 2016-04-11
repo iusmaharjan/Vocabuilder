@@ -37,4 +37,16 @@ public class RealmWordsApi implements WordsServiceApi {
             }
         });
     }
+
+    @Override
+    public boolean checkDuplicate(String word) {
+        Realm realm = Realm.getDefaultInstance();
+
+        if(realm.where(Word.class).equalTo("word", word).findAll().isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
 }

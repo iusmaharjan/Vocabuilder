@@ -9,5 +9,6 @@
 
     <!-- Error Text -->
     <string name="error_empty_word">Enter the Word to add</string>
+    <string name="error_duplicate_word">Word already exists</string>
 
 </resources>
