@@ -6,6 +6,8 @@ public interface AddWordContract {
 
     interface View {
         void showWordList();
+
+        void showEmptyWordError();
     }
 
     interface UserInteractions {

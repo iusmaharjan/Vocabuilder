@@ -1,5 +1,6 @@
 package com.iusmaharjan.vocabuilder.addword;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -63,5 +64,12 @@ public class AddWordFragment extends Fragment implements AddWordContract.View{
     @Override
     public void showWordList() {
         Toast.makeText(getContext(), "Save Successful", Toast.LENGTH_LONG).show();
+        getActivity().setResult(Activity.RESULT_OK);
+        getActivity().finish();
+    }
+
+    @Override
+    public void showEmptyWordError() {
+        Toast.makeText(getContext(), getString(R.string.error_empty_word), Toast.LENGTH_LONG).show();
     }
 }

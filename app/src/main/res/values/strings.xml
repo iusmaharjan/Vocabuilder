@@ -7,4 +7,7 @@
     <string name="text_word">Word</string>
     <string name="text_notes">Notes</string>
 
+    <!-- Error Text -->
+    <string name="error_empty_word">Enter the Word to add</string>
+
 </resources>

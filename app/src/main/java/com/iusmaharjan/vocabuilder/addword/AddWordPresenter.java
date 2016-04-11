@@ -21,7 +21,11 @@ public class AddWordPresenter implements AddWordContract.UserInteractions {
     }
     @Override
     public void saveWord(String word, String note) {
-        wordsRepository.saveWord(new Word(word, note));
-        view.showWordList();
+        if(word == null || "".equals(word)) {
+            view.showEmptyWordError();
+        } else {
+            wordsRepository.saveWord(new Word(word, note));
+            view.showWordList();
+        }
     }
 }
