@@ -49,4 +49,13 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
     public int getItemCount() {
         return words.size();
     }
+
+    public void replaceData(List<Word> words) {
+        setList(words);
+        notifyDataSetChanged();
+    }
+
+    private void setList(List<Word> words) {
+        this.words = checkNotNull(words);
+    }
 }
