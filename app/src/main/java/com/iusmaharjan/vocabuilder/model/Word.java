@@ -3,11 +3,12 @@ package com.iusmaharjan.vocabuilder.model;
 import java.util.Date;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 import io.realm.annotations.Required;
 
 public class Word extends RealmObject {
 
-    @Required
+    @PrimaryKey
     private String word;
 
     private String note;

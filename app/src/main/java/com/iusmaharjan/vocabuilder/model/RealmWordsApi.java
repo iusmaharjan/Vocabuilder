@@ -3,6 +3,7 @@ package com.iusmaharjan.vocabuilder.model;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 
 public class RealmWordsApi implements WordsServiceApi {
     @Override
@@ -27,7 +28,12 @@ public class RealmWordsApi implements WordsServiceApi {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                realm.copyToRealm(word);
+                try {
+                    realm.copyToRealm(word);
+                } catch (RealmPrimaryKeyConstraintException e) {
+                    //Show appropriate error
+                    e.printStackTrace();
+                }
             }
         });
     }

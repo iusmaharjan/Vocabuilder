@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 
 import com.iusmaharjan.vocabuilder.addword.AddWordActivity;
 import com.iusmaharjan.vocabuilder.R;
+import com.iusmaharjan.vocabuilder.model.RealmWordsApi;
 import com.iusmaharjan.vocabuilder.model.Word;
+import com.iusmaharjan.vocabuilder.model.WordsRepositoryImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,19 +45,14 @@ public class MainFragment extends Fragment implements MainActivityContract.View 
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        userActionsListener = new MainActivityPresenter(this);
+        userActionsListener = new MainActivityPresenter(this, new WordsRepositoryImpl(new RealmWordsApi()));
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        List<Word> words = new ArrayList<>();
-        words.add(new Word("One"));
-        words.add(new Word("Two"));
-        words.add(new Word("Three"));
-
-        wordListAdapter = new WordListAdapter(words);
+        wordListAdapter = new WordListAdapter(new ArrayList<Word>(0));
     }
 
     @Nullable
@@ -79,7 +76,32 @@ public class MainFragment extends Fragment implements MainActivityContract.View 
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        userActionsListener.loadNotes(false);
+    }
+
+    @Override
     public void showAddNewWord() {
         startActivityForResult(AddWordActivity.launchAddWordActivity(getContext()), REQUEST_CODE_ADD_WORD);
+    }
+
+    @Override
+    public void showWords(List<Word> words) {
+
+        List<Word> wordsList = new ArrayList<Word>();
+
+        // TODO: Review
+        // Hack to remove realm error
+        for(Word word: words) {
+            wordsList.add(new Word(word.getWord()));
+        }
+
+        wordListAdapter.replaceData(wordsList);
+    }
+
+    @Override
+    public void showWordDetailUi(String wordId) {
+        //TODO: When a list item is clicked, open the detail view
     }
 }
