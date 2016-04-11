@@ -82,4 +82,14 @@ public class MainFragment extends Fragment implements MainActivityContract.View 
     public void showAddNewWord() {
         startActivityForResult(AddWordActivity.launchAddWordActivity(getContext()), REQUEST_CODE_ADD_WORD);
     }
+
+    @Override
+    public void showWords(List<Word> words) {
+        //TODO: Show list of words that are saved
+    }
+
+    @Override
+    public void showWordDetailUi(String wordId) {
+        //TODO: When a list item is clicked, open the detail view
+    }
 }

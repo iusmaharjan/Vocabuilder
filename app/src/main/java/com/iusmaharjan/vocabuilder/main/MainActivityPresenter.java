@@ -3,6 +3,8 @@ package com.iusmaharjan.vocabuilder.main;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 
+import com.iusmaharjan.vocabuilder.model.Word;
+
 import static com.google.common.base.Preconditions.checkNotNull;
 
 public class MainActivityPresenter implements MainActivityContract.UserActionsListener{
@@ -16,5 +18,10 @@ public class MainActivityPresenter implements MainActivityContract.UserActionsLi
     @Override
     public void addNewWord() {
         view.showAddNewWord();
+    }
+
+    @Override
+    public void openWordsDetail(@NonNull Word requesetedWord) {
+        //TODO: Implement this method
     }
 }
