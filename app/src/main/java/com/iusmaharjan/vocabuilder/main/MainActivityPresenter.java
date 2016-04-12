@@ -39,7 +39,7 @@ public class MainActivityPresenter implements MainActivityContract.UserActionsLi
     }
 
     @Override
-    public void openWordsDetail(@NonNull Word requesetedWord) {
-        //TODO: Implement this method
+    public void openWordsDetail(@NonNull Word requestedWord) {
+        view.showWordDetailUi(requestedWord.getWord());
     }
 }

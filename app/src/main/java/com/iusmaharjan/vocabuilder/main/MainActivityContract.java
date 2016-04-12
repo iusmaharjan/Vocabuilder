@@ -23,7 +23,7 @@ public interface MainActivityContract {
 
         void loadNotes(boolean forced);
 
-        void openWordsDetail(@NonNull Word requesetedWord);
+        void openWordsDetail(@NonNull Word requestedWord);
 
     }
 }

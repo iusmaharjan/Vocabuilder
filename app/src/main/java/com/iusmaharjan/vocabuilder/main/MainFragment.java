@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.iusmaharjan.vocabuilder.addword.AddWordActivity;
 import com.iusmaharjan.vocabuilder.R;
@@ -48,11 +49,18 @@ public class MainFragment extends Fragment implements MainActivityContract.View 
         userActionsListener = new MainActivityPresenter(this, new WordsRepositoryImpl(new RealmWordsApi()));
     }
 
+    private WordListAdapter.WordItemListener wordItemListener = new WordListAdapter.WordItemListener() {
+        @Override
+        public void onClick(Word clickedWord) {
+            userActionsListener.openWordsDetail(clickedWord);
+        }
+    };
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        wordListAdapter = new WordListAdapter(new ArrayList<Word>(0));
+        wordListAdapter = new WordListAdapter(new ArrayList<Word>(0), wordItemListener);
     }
 
     @Nullable
@@ -102,6 +110,6 @@ public class MainFragment extends Fragment implements MainActivityContract.View 
 
     @Override
     public void showWordDetailUi(String wordId) {
-        //TODO: When a list item is clicked, open the detail view
+        Toast.makeText(getContext(), wordId, Toast.LENGTH_LONG).show();
     }
 }
