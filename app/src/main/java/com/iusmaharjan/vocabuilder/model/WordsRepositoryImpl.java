@@ -48,4 +48,9 @@ public class WordsRepositoryImpl implements WordsRepository {
     public boolean checkDuplicate(@NonNull String word) {
         return mWordsServiceApi.checkDuplicate(word);
     }
+
+    @Override
+    public void deleteWord(@NonNull String wordId) {
+        mWordsServiceApi.deleteWord(wordId);
+    }
 }

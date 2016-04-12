@@ -11,7 +11,13 @@
     <string name="error_empty_word">Enter the Word to add</string>
     <string name="error_duplicate_word">Word already exists</string>
 
+    <!-- Message -->
+    <string name="message_deleted">Word deleted</string>
+
     <!-- Key Strings -->
     <string name="key_word_id">word_id</string>
+
+    <!-- Menu Items -->
+    <string name="menu_delete">delete</string>
 
 </resources>

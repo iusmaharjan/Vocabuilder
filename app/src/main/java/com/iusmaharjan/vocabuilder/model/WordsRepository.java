@@ -21,5 +21,7 @@ public interface WordsRepository {
 
     void saveWord(@NonNull Word word);
 
+    void deleteWord(@NonNull String wordId);
+
     void refreshData();
 }

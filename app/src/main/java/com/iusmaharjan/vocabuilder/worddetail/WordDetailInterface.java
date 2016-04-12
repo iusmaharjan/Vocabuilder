@@ -7,9 +7,13 @@ public interface WordDetailInterface {
         void showWord(String word);
 
         void showNote(String note);
+
+        void showDeleted(String word);
     }
 
     interface UserInteractions {
         void openWord(@NonNull String wordId);
+
+        void deleteWord(@NonNull String wordId);
     }
 }

@@ -13,5 +13,7 @@ public interface WordsServiceApi {
 
     void saveWord(Word word);
 
+    void deleteWord(String wordId);
+
     boolean checkDuplicate(String word);
 }

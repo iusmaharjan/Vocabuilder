@@ -25,4 +25,10 @@ public class WordDetailPresenter implements WordDetailInterface.UserInteractions
             }
         });
     }
+
+    @Override
+    public void deleteWord(@NonNull String wordId) {
+        wordsRepository.deleteWord(wordId);
+        view.showDeleted(wordId);
+    }
 }

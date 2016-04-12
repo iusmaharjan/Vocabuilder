@@ -3,6 +3,7 @@ package com.iusmaharjan.vocabuilder.model;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 import io.realm.exceptions.RealmPrimaryKeyConstraintException;
 
 public class RealmWordsApi implements WordsServiceApi {
@@ -47,6 +48,18 @@ public class RealmWordsApi implements WordsServiceApi {
         } else {
             return true;
         }
+    }
+
+    @Override
+    public void deleteWord(String wordId) {
+        Realm realm = Realm.getDefaultInstance();
+        final RealmResults<Word> result = realm.where(Word.class).equalTo("word", wordId).findAll();
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                result.clear();
+            }
+        });
 
     }
 }

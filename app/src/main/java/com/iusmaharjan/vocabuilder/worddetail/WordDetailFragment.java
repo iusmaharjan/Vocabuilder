@@ -4,9 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.iusmaharjan.vocabuilder.R;
 import com.iusmaharjan.vocabuilder.model.RealmWordsApi;
@@ -47,6 +51,24 @@ public class WordDetailFragment extends Fragment implements WordDetailInterface.
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         wordId = getArguments().getString(getString(R.string.key_word_id));
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.detail_word_menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.delete_word:
+                userInteractions.deleteWord(wordId);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Nullable
@@ -73,5 +95,11 @@ public class WordDetailFragment extends Fragment implements WordDetailInterface.
     @Override
     public void showNote(String note) {
         noteTextView.setText(note);
+    }
+
+    @Override
+    public void showDeleted(String word) {
+        getActivity().finish();
+        Toast.makeText(getContext(), getString(R.string.message_deleted), Toast.LENGTH_SHORT).show();
     }
 }
