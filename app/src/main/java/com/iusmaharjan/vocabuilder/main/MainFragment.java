@@ -16,6 +16,7 @@ import com.iusmaharjan.vocabuilder.R;
 import com.iusmaharjan.vocabuilder.model.RealmWordsApi;
 import com.iusmaharjan.vocabuilder.model.Word;
 import com.iusmaharjan.vocabuilder.model.WordsRepositoryImpl;
+import com.iusmaharjan.vocabuilder.worddetail.WordDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -110,6 +111,6 @@ public class MainFragment extends Fragment implements MainActivityContract.View 
 
     @Override
     public void showWordDetailUi(String wordId) {
-        Toast.makeText(getContext(), wordId, Toast.LENGTH_LONG).show();
+        startActivity(WordDetailActivity.launchWordDetailActivity(getContext(), wordId));
     }
 }

@@ -1,8 +1,8 @@
 <resources>
-    
+
     <!-- App Name -->
     <string name="app_name">Vocabuilder</string>
-    
+
     <!-- Text View Strings -->
     <string name="text_word">Word</string>
     <string name="text_notes">Notes</string>
@@ -10,5 +10,8 @@
     <!-- Error Text -->
     <string name="error_empty_word">Enter the Word to add</string>
     <string name="error_duplicate_word">Word already exists</string>
+
+    <!-- Key Strings -->
+    <string name="key_word_id">word_id</string>
 
 </resources>
