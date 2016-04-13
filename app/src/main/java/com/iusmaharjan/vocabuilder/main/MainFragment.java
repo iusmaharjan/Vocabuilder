@@ -80,6 +80,7 @@ public class MainFragment extends Fragment implements MainActivityContract.View 
 
         recyclerView.setAdapter(wordListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getContext()));
 
         return rootView;
     }

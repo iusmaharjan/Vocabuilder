@@ -4,8 +4,6 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:paddingTop="@dimen/list_padding"
-        android:paddingBottom="@dimen/list_padding"
         android:id="@+id/list_words"
         android:background="@color/grey_50"
         android:layout_width="match_parent"
