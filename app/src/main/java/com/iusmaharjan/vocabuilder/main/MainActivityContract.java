@@ -15,6 +15,8 @@ public interface MainActivityContract {
         void showWords(List<Word> words);
 
         void showWordDetailUi(String wordId);
+
+        //TODO: showEmptyList();
     }
 
     interface UserActionsListener {

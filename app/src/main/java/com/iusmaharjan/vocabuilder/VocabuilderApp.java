@@ -51,6 +51,8 @@ public class VocabuilderApp extends Application {
 
     }
 
+
+    //TODO: add analytics
     /** A tree which logs important information for crash reporting. */
     private static class CrashReportingTree extends Timber.Tree {
         @Override protected void log(int priority, String tag, String message, Throwable t) {
