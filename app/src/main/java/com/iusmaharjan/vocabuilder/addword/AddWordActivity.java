@@ -20,6 +20,16 @@ public class AddWordActivity extends AppCompatActivity {
         if(null == savedInstanceState) {
             initFragment(AddWordFragment.getInstance());
         }
+
+        if(getSupportActionBar()!=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     public static Intent launchAddWordActivity(Context context) {

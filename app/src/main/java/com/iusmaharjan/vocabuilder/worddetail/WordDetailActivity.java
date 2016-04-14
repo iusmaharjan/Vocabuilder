@@ -2,11 +2,11 @@ package com.iusmaharjan.vocabuilder.worddetail;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.iusmaharjan.vocabuilder.R;
 
@@ -20,6 +20,16 @@ public class WordDetailActivity extends AppCompatActivity {
         if(null == savedInstanceState) {
             initFragment(WordDetailFragment.getInstance(bundle));
         }
+
+        if(getSupportActionBar()!=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     public static Intent launchWordDetailActivity(Context context, String wordId) {
