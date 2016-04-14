@@ -5,12 +5,13 @@
     <dimen name="list_vertical_margin">16dp</dimen>
     <dimen name="list_horizontal_margin">16dp</dimen>
     <dimen name="list_padding">8dp</dimen>
-    <dimen name="margin_small">1dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
 
     <!-- Margin for Favicon -->
     <dimen name="fab_margin">16dp</dimen>
 
     <!-- Font Size -->
     <dimen name="font_size_normal">16sp</dimen>
+    <dimen name="font_size_large">24sp</dimen>
 
 </resources>

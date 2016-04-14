@@ -8,22 +8,24 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/text_word"
-        android:text="@string/text_word"
+        android:id="@+id/text_word_value"
+        android:textSize="@dimen/font_size_large"
         android:textColor="@color/colorNormalText"
-        android:textSize="@dimen/font_size_normal"
+        android:paddingBottom="@dimen/list_vertical_margin"
+        android:paddingTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/text_word_value"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="1dp"
+        android:background="@drawable/line_divider" />
 
     <TextView
         android:id="@+id/text_note"
         android:text="@string/text_notes"
-        android:paddingTop="16dp"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/list_vertical_margin"
         android:textColor="@color/colorNormalText"
         android:textSize="@dimen/font_size_normal"
         android:layout_width="match_parent"
@@ -31,6 +33,9 @@
 
     <TextView
         android:id="@+id/text_note_value"
+        android:textColor="@color/colorNormalText"
+        android:paddingTop="8dp"
+        android:textSize="@dimen/font_size_normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
