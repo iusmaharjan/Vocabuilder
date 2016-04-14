@@ -5,6 +5,10 @@ import android.support.annotation.NonNull;
 import com.iusmaharjan.vocabuilder.model.Word;
 import com.iusmaharjan.vocabuilder.model.WordsRepository;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import static com.google.common.base.Preconditions.checkNotNull;
 
 public class AddWordPresenter implements AddWordContract.UserInteractions {
@@ -27,7 +31,7 @@ public class AddWordPresenter implements AddWordContract.UserInteractions {
             if(wordsRepository.checkDuplicate(word)) {
                 view.showDuplicateWordError();
             } else {
-                wordsRepository.saveWord(new Word(word, note));
+                wordsRepository.saveWord(new Word(word, note, new Date()));
                 view.showWordList();
             }
         }

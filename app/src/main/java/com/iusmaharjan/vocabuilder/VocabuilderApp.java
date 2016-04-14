@@ -42,7 +42,8 @@ public class VocabuilderApp extends Application {
                         if (oldVersion == 0) {
                             schema.create("Word")
                                     .addField("word", String.class)
-                                    .addField("note", String.class);
+                                    .addField("note", String.class)
+                                    .addField("date_added", Date.class);
                             oldVersion++;
                         }
                     }

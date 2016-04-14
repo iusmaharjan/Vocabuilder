@@ -4,7 +4,6 @@ import java.util.Date;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
-import io.realm.annotations.Required;
 
 public class Word extends RealmObject {
 
@@ -13,11 +12,14 @@ public class Word extends RealmObject {
 
     private String note;
 
+    private Date date_added;
+
     public Word() {}
 
-    public Word(String word, String note) {
+    public Word(String word, String note, Date date_added) {
         this.word = word;
         this.note = note;
+        this.date_added = date_added;
     }
 
     public Word(String word) {
@@ -40,4 +42,11 @@ public class Word extends RealmObject {
         this.note = note;
     }
 
+    public Date getDate() {
+        return date_added;
+    }
+
+    public void setDate(Date date) {
+        this.date_added = date;
+    }
 }
