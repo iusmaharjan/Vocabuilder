@@ -19,12 +19,13 @@
         android:id="@+id/edit_word"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:inputType="text" />
 
     <TextView
         android:id="@+id/text_note"
         android:text="@string/text_notes"
-        android:paddingTop="16dp"
+        android:paddingTop="@dimen/activity_horizontal_margin"
         android:textColor="@color/colorNormalText"
         android:textSize="@dimen/font_size_normal"
         android:layout_width="match_parent"
@@ -34,6 +35,8 @@
         android:id="@+id/edit_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text" />
+        android:lines="5"
+        android:gravity="top|left"
+        android:inputType="text|textMultiLine"/>
 
 </LinearLayout>

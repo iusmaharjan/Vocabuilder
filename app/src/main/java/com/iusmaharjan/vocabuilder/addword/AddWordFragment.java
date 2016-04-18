@@ -23,8 +23,6 @@ public class AddWordFragment extends Fragment implements AddWordContract.View{
     @Bind(R.id.edit_word)
     TextView word;
 
-
-    //TODO: Make note multi-line and handle enter key
     @Bind(R.id.edit_note)
     TextView note;
 
